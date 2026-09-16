@@ -1,7 +1,6 @@
 /* =========================================================
-   SUDIP TIMALSINA — BUILT ENVIRONMENT PORTFOLIO
-   script.js — organised into small, focused modules.
-   Edit the PROJECTS array below to update Selected Work.
+   SUDIP TIMALSINA — PORTFOLIO SCRIPT
+   Updated Projects & Dynamic Map
    ========================================================= */
 
 (function () {
@@ -9,74 +8,91 @@
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* =======================================================
-     DATA — edit here to change project content / images
-     ======================================================= */
+  /* PROJECTS DATA - REPLACED ACCORDING TO SPECIFICATION */
   var PROJECTS = [
     {
-      id: 'qantas',
+      id: 'study-table',
       num: '01',
-      title: 'Qantas Maintenance Hangar',
-      categoryLabel: 'Load Path / Structure',
-      tags: ['structure', 'analysis'],
-      tools: 'Revit / AutoCAD / Analysis',
-      images: ['assets/qantas.jpg', 'assets/qantas-02.jpg', 'assets/qantas-03.jpg'],
-      description: 'Curved primary steel roof frame, bracing, columns and slab/apron analysis.',
-      learned: 'Placeholder — replace with a short reflection on what analysing this structure taught you about load paths and structural decision-making.',
-      why: 'Placeholder — replace with a note on why this study matters to your development as a construction management student.'
+      title: 'Study Table Design',
+      categoryLabel: 'Physical Design & Fabrication',
+      tags: ['physical'],
+      tools: 'Timber Craft / Ergonomic Design / Joinery',
+      images: ['assets/hero.jpg'],
+      description: 'Designed and constructed a customized personal study table in 9th grade, focusing on structural stability, joinery, and functional spatial layout.',
+      learned: 'Gained early practical understanding of structural ergonomics, load support, and turning raw ideas into tangible, functional furniture.',
+      why: 'Marked my initial realization that design is an intentional process connecting human scale, utility, and structural assembly.'
     },
     {
-      id: 'canberra-houses',
+      id: 'buddha-air',
       num: '02',
-      title: 'Canberra Houses',
-      categoryLabel: 'AutoCAD / Technical Drawing',
-      tags: ['autocad', 'presentation'],
-      tools: 'AutoCAD / Technical Documentation',
-      images: ['assets/canberra-houses.jpg', 'assets/canberra-houses-02.jpg'],
-      description: 'Plans, sections, elevations, levels, furniture and material information.',
-      learned: 'Placeholder — replace with a short reflection on what producing these technical drawings taught you.',
-      why: 'Placeholder — replace with a note on why this study matters to your development.'
+      title: 'Buddha Air Aircraft Scale Model',
+      categoryLabel: 'Physical Model Craft',
+      tags: ['physical'],
+      tools: 'Hand Craft / Scale Modeling / Aerodynamic Geometry',
+      images: ['assets/hero.jpg'],
+      description: 'Crafted a detailed physical scale replica of a local Buddha Air aircraft from Nepal, exploring structural balance and fine model craft.',
+      learned: 'Developed strong spatial awareness, attention to detailed geometry, and patience in precision component assembly.',
+      why: 'Fostered a deep appreciation for precise physical representation and precision modeling.'
     },
     {
-      id: 'revit',
+      id: 'truss-bridge',
       num: '03',
-      title: 'Revit Studies',
-      categoryLabel: 'BIM / Building Model',
-      tags: ['revit', 'technology'],
-      tools: 'Revit / BIM',
-      images: ['assets/revit.jpg', 'assets/revit-02.jpg'],
-      description: 'Building elements, grids, levels, structural relationships and digital modelling.',
-      learned: 'Placeholder — replace with a short reflection on what this modelling exercise taught you about digital construction.',
-      why: 'Placeholder — replace with a note on why this study matters to your development.'
+      title: 'Belconnen Inspired Truss Bridge',
+      categoryLabel: 'Structural Engineering Model',
+      tags: ['physical', 'analysis'],
+      tools: 'Physical Prototyping / Structural Load Mechanics',
+      images: ['assets/hero.jpg'],
+      description: 'Engineered a physical model bridge inspired by the architectural walking bridge in Belconnen, testing structural load transfer and member efficiency.',
+      learned: 'Understood the fundamental principles of truss distribution, member tension/compression, and structural efficiency.',
+      why: 'Connected local architectural observation in Canberra with physical structural engineering principles.'
     },
     {
-      id: 'westfield',
+      id: 'structural-analysis',
       num: '04',
-      title: 'Westfield Belconnen',
-      categoryLabel: 'Built Environment Analysis',
-      tags: ['technology', 'analysis', 'presentation'],
-      tools: 'Site Analysis / Presentation',
-      images: ['assets/westfield.jpg', 'assets/westfield-02.jpg'],
-      description: 'Exploring building technology and communicating analysis through presentation.',
-      learned: 'Placeholder — replace with a short reflection on what this analysis taught you about built environment technology.',
-      why: 'Placeholder — replace with a note on why this study matters to your development.'
+      title: 'Westfield & Qantas Hangar Structural Analysis',
+      categoryLabel: 'Built Environment Case Study',
+      tags: ['analysis'],
+      tools: 'Structural Mapping / Site Analysis / Diagrammatic Modeling',
+      images: ['assets/qantas.jpg', 'assets/westfield.jpg'],
+      description: 'Detailed structural analysis examining load paths and framing systems of the Westfield Belconnen carpark and the Qantas Maintenance Hangar at Canberra Airport.',
+      learned: 'Analyzed how long-span steel trusses and concrete parking frames handle dynamic loads, environmental stress, and open spatial planning.',
+      why: 'Anchored theoretical structural knowledge in real-world commercial and aviation infrastructure.'
+    },
+    {
+      id: 'autocad-houses',
+      num: '05',
+      title: 'Canberra 400 Series AutoCAD Plans',
+      categoryLabel: 'AutoCAD Technical Drafting',
+      tags: ['autocad'],
+      tools: 'AutoCAD / Technical Documentation / Architectural Floor Plans',
+      images: ['assets/canberra-houses.jpg'],
+      description: 'Drafted complete architectural drawings, floor plans, sections, and structural elevations based on Canberra 400 series residential architecture.',
+      learned: 'Mastered precise CAD drafting standards, architectural linework hierarchy, dimensioning, and spatial coordination.',
+      why: 'Established a professional technical drafting foundation essential for construction documentation.'
+    },
+    {
+      id: 'revit-skyscraper',
+      num: '06',
+      title: '3D Skyscraper BIM Model (In Progress)',
+      categoryLabel: 'Revit 3D Building Information Modeling',
+      tags: ['revit'],
+      tools: 'Revit / BIM / Parametric Modeling',
+      images: ['assets/revit.jpg'],
+      description: 'Currently modeling a high-rise 3D skyscraper, exploring parametric components, vertical core organization, and curtain wall facade systems.',
+      learned: 'Developing capabilities in 3D Building Information Modeling (BIM), multi-story level coordination, and parametric modeling workflows.',
+      why: 'Represents my current growth phase toward modern digital building modeling and smart construction practices.'
     }
   ];
 
   var DISCIPLINE_NODES = [
-    'Building', 'Construction', 'BIM', 'Project Management',
-    'Procurement', 'Contracts', 'Digital Technology', 'Sustainability'
+    'Construction Management', '3D Revit Modeling', 'AutoCAD Drafting',
+    'Structural Analysis', 'Heritage Conservation', 'Procurement & Contracts',
+    'Bridge Engineering', 'Site Planning'
   ];
 
-  /* =======================================================
-     UTIL
-     ======================================================= */
   function qs(sel, ctx) { return (ctx || document).querySelector(sel); }
   function qsa(sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); }
 
-  /* =======================================================
-     CUSTOM CURSOR
-     ======================================================= */
   function initCursor() {
     var cursor = qs('#cursor');
     var label = qs('#cursorLabel');
@@ -119,9 +135,6 @@
     });
   }
 
-  /* =======================================================
-     MENU PANEL
-     ======================================================= */
   function initMenu() {
     var toggle = qs('#menuToggle');
     var panel = qs('#menuPanel');
@@ -150,10 +163,6 @@
     });
   }
 
-  /* =======================================================
-     SMOOTH SCROLL for all in-page nav links (respects
-     reduced motion via CSS scroll-behavior override)
-     ======================================================= */
   function initNavLinks() {
     qsa('[data-nav-link]').forEach(function (a) {
       a.addEventListener('click', function (e) {
@@ -168,9 +177,6 @@
     });
   }
 
-  /* =======================================================
-     SCROLL PROGRESS BAR
-     ======================================================= */
   function initScrollProgress() {
     var bar = qs('#scrollProgressBar');
     if (!bar) return;
@@ -185,9 +191,6 @@
     update();
   }
 
-  /* =======================================================
-     ACTIVE SECTION SPY — updates header label + orbit node
-     ======================================================= */
   function initSectionSpy() {
     var sections = qsa('.section[data-section-label]');
     var label = qs('#activeSectionLabel');
@@ -211,9 +214,6 @@
     sections.forEach(function (s) { observer.observe(s); });
   }
 
-  /* =======================================================
-     SCROLL REVEAL
-     ======================================================= */
   function initReveal() {
     var items = qsa('.reveal');
     if (!items.length) return;
@@ -232,9 +232,6 @@
     items.forEach(function (el) { observer.observe(el); });
   }
 
-  /* =======================================================
-     ORBIT — hover reveals info in the central image caption
-     ======================================================= */
   function initOrbit() {
     var nodes = qsa('.orbit-node');
     var captionNum = qs('#orbitCaptionNum');
@@ -265,19 +262,14 @@
       node.addEventListener('blur', reset);
     });
 
-    // gentle image error fallback (keeps layout intact)
     if (img) {
       img.addEventListener('error', function () {
         img.style.display = 'none';
-        img.parentElement.style.background =
-          'repeating-linear-gradient(45deg, var(--beige), var(--beige) 10px, var(--paper-dim) 10px, var(--paper-dim) 20px)';
+        img.parentElement.style.background = 'var(--paper-dim)';
       });
     }
   }
 
-  /* =======================================================
-     SKILLS — accordion list synced with radial diagram
-     ======================================================= */
   function initSkills() {
     var items = qsa('.skill-item');
     if (!items.length) return;
@@ -302,9 +294,6 @@
     });
   }
 
-  /* =======================================================
-     DISCIPLINE MAP — build radial svg diagram from data
-     ======================================================= */
   function initDisciplineMap() {
     var linesG = qs('#dmLines');
     var nodesG = qs('#dmNodes');
@@ -313,7 +302,6 @@
     var cx = 240, cy = 240, hubR = 54, nodeR = 46, radius = 168;
     var count = DISCIPLINE_NODES.length;
 
-    // hub
     var hub = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     hub.setAttribute('class', 'dm-node is-hub');
     hub.innerHTML =
@@ -349,9 +337,6 @@
     });
   }
 
-  /* =======================================================
-     PROJECT GRID — render cards + filter
-     ======================================================= */
   function renderProjects() {
     var grid = qs('#projectGrid');
     if (!grid) return;
@@ -360,7 +345,7 @@
         '<article class="project-card" data-id="' + p.id + '" data-tags="' + p.tags.join(' ') + '" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project detail: ' + p.title + '">' +
           '<div class="pc-frame">' +
             '<span class="pc-num">' + p.num + '</span>' +
-            '<img src="' + p.images[0] + '" alt="' + p.title + ' — project image" loading="lazy" onerror="this.closest(\'.pc-frame\').style.background=\'repeating-linear-gradient(45deg, var(--beige), var(--beige) 10px, var(--paper-dim) 10px, var(--paper-dim) 20px)\'; this.style.display=\'none\';">' +
+            '<img src="' + p.images[0] + '" alt="' + p.title + '" loading="lazy" onerror="this.closest(\'.pc-frame\').style.background=\'var(--paper-dim)\'; this.style.display=\'none\';">' +
           '</div>' +
           '<div class="pc-meta">' +
             '<h3 class="pc-title">' + p.title + '</h3>' +
@@ -397,9 +382,6 @@
     });
   }
 
-  /* =======================================================
-     PROJECT MODAL
-     ======================================================= */
   var lastFocusedEl = null;
 
   function openModal(id) {
@@ -417,7 +399,7 @@
     qs('#modalWhy').textContent = project.why;
 
     var imagesHTML = project.images.map(function (src, i) {
-      return '<img src="' + src + '" alt="' + project.title + ' — image ' + (i + 1) + '" loading="lazy" onerror="this.style.background=\'repeating-linear-gradient(45deg, var(--beige), var(--beige) 10px, var(--paper-dim) 10px, var(--paper-dim) 20px)\'; this.removeAttribute(\'src\');">';
+      return '<img src="' + src + '" alt="' + project.title + ' — image ' + (i + 1) + '" loading="lazy" onerror="this.style.background=\'var(--paper-dim)\'; this.removeAttribute(\'src\');">';
     }).join('');
     qs('#modalImages').innerHTML = imagesHTML;
 
@@ -445,9 +427,6 @@
     });
   }
 
-  /* =======================================================
-     HEADER — hide-on-scroll-down / show-on-scroll-up (subtle)
-     ======================================================= */
   function initHeaderBehaviour() {
     var header = qs('#siteHeader');
     if (!header) return;
@@ -462,9 +441,6 @@
     }, { passive: true });
   }
 
-  /* =======================================================
-     INIT
-     ======================================================= */
   document.addEventListener('DOMContentLoaded', function () {
     initCursor();
     initMenu();
