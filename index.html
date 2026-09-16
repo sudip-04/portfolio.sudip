@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sudip Timalsina — Built Environment Portfolio</title>
+<meta name="description" content="Sudip Timalsina — emerging built environment professional. An evolving map of design, construction and digital practice.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================================================== -->
+<!-- CUSTOM CURSOR (desktop only, decorative, aria-hidden)  -->
+<!-- ===================================================== -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <span class="cursor-dot"></span>
+  <span class="cursor-ring"></span>
+  <span class="cursor-label" id="cursorLabel"></span>
+</div>
+
+<!-- ===================================================== -->
+<!-- SCROLL PROGRESS                                        -->
+<!-- ===================================================== -->
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+<!-- ===================================================== -->
+<!-- SKIP LINK                                              -->
+<!-- ===================================================== -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================================================== -->
+<!-- SITE HEADER                                            -->
+<!-- ===================================================== -->
+<header class="site-header" id="siteHeader">
+  <a href="#top" class="header-name" aria-label="Sudip Timalsina, back to top">
+    SUDIP<br>TIMALSINA
+    <span class="header-sub">BUILT ENVIRONMENT / 2026</span>
+  </a>
+
+  <nav class="index-indicator" aria-hidden="true">
+    <span id="activeSectionLabel">00 — START</span>
+  </nav>
+
+  <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menuPanel">
+    <span class="menu-toggle-text">MENU</span>
+    <span class="menu-toggle-icon"><span></span><span></span></span>
+  </button>
+</header>
+
+<!-- ===================================================== -->
+<!-- FULLSCREEN MENU PANEL                                  -->
+<!-- ===================================================== -->
+<div class="menu-panel" id="menuPanel" aria-hidden="true">
+  <nav aria-label="Section navigation" class="menu-panel-nav">
+    <ol>
+      <li><a href="#identity" data-nav-link><span class="mp-num">01</span><span class="mp-label">Identity</span><span class="mp-sub">how I think</span></a></li>
+      <li><a href="#skills" data-nav-link><span class="mp-num">02</span><span class="mp-label">Skills</span><span class="mp-sub">what I can do</span></a></li>
+      <li><a href="#direction" data-nav-link><span class="mp-num">03</span><span class="mp-label">Direction</span><span class="mp-sub">where I am heading</span></a></li>
+      <li><a href="#pathway" data-nav-link><span class="mp-num">04</span><span class="mp-label">Pathway</span><span class="mp-sub">what I will learn</span></a></li>
+      <li><a href="#career" data-nav-link><span class="mp-num">05</span><span class="mp-label">Career</span><span class="mp-sub">what comes next</span></a></li>
+      <li><a href="#work" data-nav-link><span class="mp-num">06</span><span class="mp-label">Work</span><span class="mp-sub">evidence in practice</span></a></li>
+      <li><a href="#references" data-nav-link><span class="mp-num">07</span><span class="mp-label">References</span><span class="mp-sub">sources &amp; context</span></a></li>
+    </ol>
+  </nav>
+  <div class="menu-panel-footer">
+    <span>Canberra, Australia</span>
+    <span>Originally from Nepal</span>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ===================================================== -->
+  <!-- HOME / HERO — THE ORBIT                                -->
+  <!-- ===================================================== -->
+  <section class="hero" id="top">
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Diploma of Design → Building &amp; Construction Management, University of Canberra</p>
+        <h1 class="hero-title">
+          Emerging<br>
+          professional<br>
+          portfolio
+        </h1>
+        <p class="hero-statement">Design <span aria-hidden="true">×</span> Technology <span aria-hidden="true">×</span> Construction</p>
+        <p class="hero-desc"><em>An evolving map of how I think, learn and move toward the built environment.</em></p>
+        <a href="#identity" class="hero-scroll-cue" data-cursor="EXPLORE">
+          <span class="hsc-line"></span> Begin at 01 — Identity
+        </a>
+      </div>
+
+      <div class="hero-orbit-wrap">
+        <div class="orbit" id="orbit">
+
+          <!-- orbital rings (decorative diagram lines) -->
+          <svg class="orbit-rings" viewBox="0 0 600 600" aria-hidden="true">
+            <circle cx="300" cy="300" r="299" class="ring ring-outer"></circle>
+            <circle cx="300" cy="300" r="220" class="ring ring-inner" stroke-dasharray="2 8"></circle>
+            <line x1="300" y1="1" x2="300" y2="599" class="ring ring-axis"></line>
+            <line x1="1" y1="300" x2="599" y2="300" class="ring ring-axis"></line>
+          </svg>
+
+          <!-- central image -->
+          <div class="orbit-center">
+            <img id="heroImage" src="assets/hero.jpg" alt="Central project image — currently displaying featured work" loading="lazy">
+            <div class="orbit-center-caption">
+              <span id="orbitCaptionNum">00</span>
+              <span id="orbitCaptionText">Featured — hover a node</span>
+            </div>
+          </div>
+
+          <!-- 7 orbit nodes, positioned by JS using --angle -->
+          <a href="#identity" class="orbit-node" data-nav-link data-index="0" data-cursor="OPEN"
+             style="--angle:-90deg" aria-label="01 Identity — how I think">
+            <span class="node-dot"><span class="node-num">01</span></span>
+            <span class="node-info"><strong>Identity</strong><em>how I think</em></span>
+          </a>
+          <a href="#skills" class="orbit-node" data-nav-link data-index="1" data-cursor="OPEN"
+             style="--angle:-38.6deg" aria-label="02 Skills — what I can do">
+            <span class="node-dot"><span class="node-num">02</span></span>
+            <span class="node-info"><strong>Skills</strong><em>what I can do</em></span>
+          </a>
+          <a href="#direction" class="orbit-node" data-nav-link data-index="2" data-cursor="OPEN"
+             style="--angle:12.9deg" aria-label="03 Direction — where I am heading">
+            <span class="node-dot"><span class="node-num">03</span></span>
+            <span class="node-info"><strong>Direction</strong><em>where I am heading</em></span>
+          </a>
+          <a href="#pathway" class="orbit-node" data-nav-link data-index="3" data-cursor="OPEN"
+             style="--angle:64.3deg" aria-label="04 Pathway — what I will learn">
+            <span class="node-dot"><span class="node-num">04</span></span>
+            <span class="node-info"><strong>Pathway</strong><em>what I will learn</em></span>
+          </a>
+          <a href="#career" class="orbit-node" data-nav-link data-index="4" data-cursor="OPEN"
+             style="--angle:115.7deg" aria-label="05 Career — what comes next">
+            <span class="node-dot"><span class="node-num">05</span></span>
+            <span class="node-info"><strong>Career</strong><em>what comes next</em></span>
+          </a>
+          <a href="#work" class="orbit-node" data-nav-link data-index="5" data-cursor="OPEN"
+             style="--angle:167.1deg" aria-label="06 Work — evidence in practice">
+            <span class="node-dot"><span class="node-num">06</span></span>
+            <span class="node-info"><strong>Work</strong><em>evidence in practice</em></span>
+          </a>
+          <a href="#references" class="orbit-node" data-nav-link data-index="6" data-cursor="OPEN"
+             style="--angle:218.6deg" aria-label="07 References — sources and context">
+            <span class="node-dot"><span class="node-num">07</span></span>
+            <span class="node-info"><strong>References</strong><em>sources &amp; context</em></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile / touch fallback nav — always in DOM, shown under 860px -->
+    <nav class="mobile-orbit-nav" aria-label="Section navigation">
+      <a href="#identity" data-nav-link><span>01</span>Identity<em>how I think</em></a>
+      <a href="#skills" data-nav-link><span>02</span>Skills<em>what I can do</em></a>
+      <a href="#direction" data-nav-link><span>03</span>Direction<em>where I am heading</em></a>
+      <a href="#pathway" data-nav-link><span>04</span>Pathway<em>what I will learn</em></a>
+      <a href="#career" data-nav-link><span>05</span>Career<em>what comes next</em></a>
+      <a href="#work" data-nav-link><span>06</span>Work<em>evidence in practice</em></a>
+      <a href="#references" data-nav-link><span>07</span>References<em>sources &amp; context</em></a>
+    </nav>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 01 — EMERGING DESIGN IDENTITY                          -->
+  <!-- ===================================================== -->
+  <section class="section" id="identity" data-section-label="01 — Identity">
+    <div class="section-head reveal">
+      <span class="section-meta">01 / 07</span>
+      <h2 class="section-title">Emerging<br>design identity</h2>
+    </div>
+
+    <div class="split-layout">
+      <div class="split-visual reveal">
+        <svg class="linework" viewBox="0 0 400 480" aria-hidden="true">
+          <rect x="20" y="20" width="360" height="440" class="lw-frame"></rect>
+          <line x1="20" y1="140" x2="380" y2="140" class="lw-line"></line>
+          <line x1="20" y1="260" x2="380" y2="260" class="lw-line"></line>
+          <line x1="140" y1="20" x2="140" y2="460" class="lw-line lw-dash"></line>
+          <line x1="260" y1="20" x2="260" y2="460" class="lw-line lw-dash"></line>
+          <circle cx="200" cy="200" r="70" class="lw-circle"></circle>
+          <path d="M20 460 L200 200 L380 20" class="lw-path"></path>
+          <text x="40" y="440" class="lw-label">LOAD PATH — DIAGRAM 01</text>
+        </svg>
+      </div>
+
+      <div class="split-text reveal">
+        <p>I used to think of design mainly as the appearance and layout of a building. Through my first year of study, that view has started to change.</p>
+        <p>I now see design as a process that connects people, technology, materials, structure and the way a building is constructed and used. My background in science and computer studies gives me a logical and problem-solving approach, but construction and design have shown me that there is not always one correct answer.</p>
+        <p>Working with AutoCAD and Revit has changed how I understand buildings. Instead of seeing a drawing as a final image, I am beginning to see it as a representation of systems: load paths, materials, spaces, levels, connections and decisions that affect how a building can actually be delivered.</p>
+        <p>The area I am most curious about is the relationship between design and construction. I want to understand how digital models, technical knowledge and project coordination can turn an idea into something buildable, efficient and responsible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 02 — LEARNING & SKILLS                                 -->
+  <!-- ===================================================== -->
+  <section class="section" id="skills" data-section-label="02 — Skills">
+    <div class="section-head reveal">
+      <span class="section-meta">02 / 07</span>
+      <h2 class="section-title">Learning &amp;<br>skills snapshot</h2>
+    </div>
+
+    <div class="skills-system reveal">
+      <div class="skills-list" id="skillsList">
+        <button class="skill-item is-active" data-skill="0" aria-expanded="true">
+          <span class="skill-num">01</span>
+          <span class="skill-name">Digital modelling</span>
+          <span class="skill-detail">Revit modelling, building elements, levels, grids and basic structural relationships.</span>
+        </button>
+        <button class="skill-item" data-skill="1" aria-expanded="false">
+          <span class="skill-num">02</span>
+          <span class="skill-name">Technical drawing</span>
+          <span class="skill-detail">AutoCAD plans, sections, elevations, dimensions and annotations.</span>
+        </button>
+        <button class="skill-item" data-skill="2" aria-expanded="false">
+          <span class="skill-num">03</span>
+          <span class="skill-name">Systems thinking</span>
+          <span class="skill-detail">Understanding load paths, building systems and how elements work together.</span>
+        </button>
+        <button class="skill-item" data-skill="3" aria-expanded="false">
+          <span class="skill-num">04</span>
+          <span class="skill-name">Communication</span>
+          <span class="skill-detail">Presenting ideas visually and verbally while working through feedback and group tasks.</span>
+        </button>
+      </div>
+
+      <div class="skills-radial" aria-hidden="true">
+        <svg viewBox="0 0 400 400" id="skillsSvg">
+          <circle cx="200" cy="200" r="150" class="sr-ring"></circle>
+          <circle cx="200" cy="200" r="4" class="sr-hub"></circle>
+          <line id="srLine0" x1="200" y1="200" x2="200" y2="50" class="sr-spoke is-active"></line>
+          <line id="srLine1" x1="200" y1="200" x2="336" y2="125" class="sr-spoke"></line>
+          <line id="srLine2" x1="200" y1="200" x2="336" y2="275" class="sr-spoke"></line>
+          <line id="srLine3" x1="200" y1="200" x2="200" y2="350" class="sr-spoke"></line>
+          <circle id="srNode0" cx="200" cy="50" r="26" class="sr-node is-active"></circle>
+          <circle id="srNode1" cx="336" cy="125" r="26" class="sr-node"></circle>
+          <circle id="srNode2" cx="336" cy="275" r="26" class="sr-node"></circle>
+          <circle id="srNode3" cx="200" cy="350" r="26" class="sr-node"></circle>
+          <text x="200" y="55" class="sr-num" text-anchor="middle">01</text>
+          <text x="336" y="130" class="sr-num" text-anchor="middle">02</text>
+          <text x="336" y="280" class="sr-num" text-anchor="middle">03</text>
+          <text x="200" y="355" class="sr-num" text-anchor="middle">04</text>
+        </svg>
+      </div>
+    </div>
+
+    <p class="section-footnote reveal">My confidence has grown most when I can connect a digital representation with the physical logic behind it. My next development areas are advanced Revit/BIM, technical documentation, estimating, procurement and the construction processes that sit behind a project.</p>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 03 — DISCIPLINE DIRECTION                              -->
+  <!-- ===================================================== -->
+  <section class="section" id="direction" data-section-label="03 — Direction">
+    <div class="section-head reveal">
+      <span class="section-meta">03 / 07</span>
+      <h2 class="section-title">Discipline<br>direction</h2>
+    </div>
+
+    <p class="section-lead reveal">My current direction is Building and Construction Management, with a growing interest in project coordination, BIM and digital construction.</p>
+
+    <div class="split-layout split-layout--reverse">
+      <div class="split-text reveal">
+        <p>I am interested in the part of a project where different disciplines have to work together. Construction management appeals to me because it combines technical understanding with communication, planning, sequencing, cost awareness and decision-making.</p>
+        <p>I also want to keep exploring related areas such as quantity surveying, procurement and contract administration. These areas could strengthen my understanding of how projects move from drawings and concepts into budgets, agreements, procurement decisions and construction.</p>
+        <p>I do not need to have every part of my future career decided yet. I need to build enough knowledge to make better decisions about it.</p>
+        <p>This uncertainty is useful. My goal is to develop a broad technical foundation first, then identify the combination of construction, digital tools and management where I can contribute most effectively.</p>
+      </div>
+
+      <div class="discipline-map reveal">
+        <svg viewBox="0 0 480 480" id="disciplineMap">
+          <!-- connecting lines drawn first, under nodes -->
+          <g class="dm-lines" id="dmLines"></g>
+          <g class="dm-nodes" id="dmNodes"></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 04 — STUDY PATHWAY & UNIT CHOICES                      -->
+  <!-- ===================================================== -->
+  <section class="section" id="pathway" data-section-label="04 — Pathway">
+    <div class="section-head reveal">
+      <span class="section-meta">04 / 07</span>
+      <h2 class="section-title">Study pathway<br>&amp; unit choices</h2>
+    </div>
+
+    <div class="timeline reveal" id="timeline">
+      <div class="timeline-track" aria-hidden="true"></div>
+      <div class="timeline-stage">
+        <span class="ts-marker"></span>
+        <span class="ts-stage">Now</span>
+        <h3>Diploma of Design</h3>
+        <p>Technical + design foundations</p>
+      </div>
+      <div class="timeline-stage">
+        <span class="ts-marker"></span>
+        <span class="ts-stage">Next</span>
+        <h3>Building &amp; Construction Management</h3>
+        <p>Construction + management knowledge</p>
+      </div>
+      <div class="timeline-stage">
+        <span class="ts-marker"></span>
+        <span class="ts-stage">Explore</span>
+        <h3>Construction Project Management</h3>
+        <p>Planning, coordination and delivery</p>
+      </div>
+      <div class="timeline-stage">
+        <span class="ts-marker"></span>
+        <span class="ts-stage">Apply</span>
+        <h3>Industry Experience</h3>
+        <p>Internship / cadetship / project exposure</p>
+      </div>
+    </div>
+
+    <div class="unit-list reveal">
+      <p class="unit-list-intro">Selected future units</p>
+      <div class="unit">
+        <span class="unit-code">10141</span>
+        <div class="unit-body">
+          <h4>Construction Procurement</h4>
+          <p>Relevant to understanding how projects source work, services and resources.</p>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="unit-code">10139</span>
+        <div class="unit-body">
+          <h4>Construction Project Management</h4>
+          <p>Builds capability in planning, coordination and project delivery.</p>
+        </div>
+      </div>
+      <div class="unit">
+        <span class="unit-code">7829</span>
+        <div class="unit-body">
+          <h4>Contract Administration</h4>
+          <p>Useful for understanding responsibilities, documentation and commercial relationships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 05 — EARLY CAREER / PROFESSIONAL OUTLOOK                -->
+  <!-- ===================================================== -->
+  <section class="section" id="career" data-section-label="05 — Career">
+    <div class="section-head reveal">
+      <span class="section-meta">05 / 07</span>
+      <h2 class="section-title">Early career<br>professional outlook</h2>
+    </div>
+
+    <p class="section-lead reveal">My early career goal is to move closer to project delivery while continuing to build technical and digital capability.</p>
+
+    <div class="career-path reveal">
+      <div class="cp-step">
+        <span class="cp-num">01</span>
+        <h4>Student</h4>
+        <p>Strengthen Revit, AutoCAD, construction knowledge and communication.</p>
+      </div>
+      <div class="cp-connector" aria-hidden="true"></div>
+      <div class="cp-step">
+        <span class="cp-num">02</span>
+        <h4>Industry exposure</h4>
+        <p>Internships / cadetships / project support opportunities.</p>
+      </div>
+      <div class="cp-connector" aria-hidden="true"></div>
+      <div class="cp-step">
+        <span class="cp-num">03</span>
+        <h4>Project coordination</h4>
+        <p>Documentation, programs, communication and project processes.</p>
+      </div>
+      <div class="cp-connector" aria-hidden="true"></div>
+      <div class="cp-step">
+        <span class="cp-num">04</span>
+        <h4>Construction management</h4>
+        <p>Broader responsibility for project delivery and teams.</p>
+      </div>
+    </div>
+
+    <div class="split-layout">
+      <div class="split-text reveal">
+        <p>Professionalism for me means taking responsibility for safety, quality, cost, communication and the consequences of project decisions. Social responsibility also means considering sustainability, accessibility, community impact and responsible use of resources rather than treating construction as only a technical or financial exercise.</p>
+        <p>Long term, I would like to combine construction management with strong digital capability and potentially use that experience to build and manage projects of my own.</p>
+      </div>
+
+      <div class="ethics-cloud reveal" aria-label="Areas of responsibility">
+        <span class="ec-chip">Safety</span>
+        <span class="ec-chip">Quality</span>
+        <span class="ec-chip">Cost</span>
+        <span class="ec-chip">People</span>
+        <span class="ec-chip">Sustainability</span>
+        <span class="ec-chip">Community</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 06 — SELECTED WORK                                     -->
+  <!-- ===================================================== -->
+  <section class="section section--work" id="work" data-section-label="06 — Work">
+    <div class="section-head reveal">
+      <span class="section-meta">06 / 07</span>
+      <h2 class="section-title">Selected<br>work</h2>
+      <p class="section-lead">A working archive of academic studies — structural, technical and digital. Each entry is a step in an ongoing process, not a finished practice.</p>
+    </div>
+
+    <div class="filter-bar reveal" id="filterBar" role="group" aria-label="Filter projects by category">
+      <button class="filter-chip is-active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="revit">Revit</button>
+      <button class="filter-chip" data-filter="autocad">AutoCAD</button>
+      <button class="filter-chip" data-filter="structure">Structure</button>
+      <button class="filter-chip" data-filter="technology">Building Technology</button>
+      <button class="filter-chip" data-filter="analysis">Analysis</button>
+      <button class="filter-chip" data-filter="presentation">Presentation</button>
+    </div>
+
+    <div class="project-grid reveal" id="projectGrid">
+      <!-- project cards injected by script.js from PROJECTS data -->
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- CURRENTLY DEVELOPING                                   -->
+  <!-- ===================================================== -->
+  <section class="currently-developing reveal" aria-label="Currently developing">
+    <p class="cd-label">Currently developing</p>
+    <div class="cd-marquee" aria-hidden="true">
+      <div class="cd-track">
+        <span>Revit / BIM</span><span>Construction Documentation</span><span>Project Management</span><span>Procurement</span><span>Contract Administration</span><span>Technical Communication</span>
+        <span>Revit / BIM</span><span>Construction Documentation</span><span>Project Management</span><span>Procurement</span><span>Contract Administration</span><span>Technical Communication</span>
+      </div>
+    </div>
+    <ul class="cd-list-accessible">
+      <li>Revit / BIM</li><li>Construction Documentation</li><li>Project Management</li><li>Procurement</li><li>Contract Administration</li><li>Technical Communication</li>
+    </ul>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- 07 — REFERENCES                                        -->
+  <!-- ===================================================== -->
+  <section class="section" id="references" data-section-label="07 — References">
+    <div class="section-head reveal">
+      <span class="section-meta">07 / 07</span>
+      <h2 class="section-title">References</h2>
+    </div>
+
+    <div class="references-block reveal">
+      <p class="ref-entry">Snøhetta. (n.d.). <em>Snøhetta</em>. <a href="https://www.snohetta.com/" target="_blank" rel="noopener noreferrer">https://www.snohetta.com/</a></p>
+      <p class="ref-note">The visual language of this portfolio is an original interpretation inspired by contemporary architecture practice websites. It is not a copy of Snøhetta's branding or site.</p>
+
+      <div class="ref-placeholder-grid">
+        <div class="ref-placeholder">
+          <span class="rp-label">UC readings</span>
+          <p>Placeholder — add unit reading list references here in APA 7 format.</p>
+        </div>
+        <div class="ref-placeholder">
+          <span class="rp-label">Lecture material</span>
+          <p>Placeholder — cite lecture slides / studio material used to inform this portfolio.</p>
+        </div>
+        <div class="ref-placeholder">
+          <span class="rp-label">Project sources</span>
+          <p>Placeholder — cite any brief, dataset or site information used for selected work.</p>
+        </div>
+        <div class="ref-placeholder">
+          <span class="rp-label">Image credits</span>
+          <p>Placeholder — credit any photography, drawings or renders not produced by me.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================================================== -->
+<!-- FOOTER                                                 -->
+<!-- ===================================================== -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <p class="footer-name">Sudip Timalsina</p>
+    <p class="footer-role">Emerging built environment professional</p>
+  </div>
+  <div class="footer-meta">
+    <span>Canberra / Australia</span>
+    <span>2026</span>
+  </div>
+  <a href="#top" class="back-to-top" data-cursor="TOP">Back to top <span aria-hidden="true">↑</span></a>
+</footer>
+
+<!-- ===================================================== -->
+<!-- PROJECT DETAIL MODAL                                   -->
+<!-- ===================================================== -->
+<div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-panel">
+    <button class="modal-close" id="modalClose" aria-label="Close project detail">
+      <span>Close</span> <span aria-hidden="true">×</span>
+    </button>
+    <div class="modal-scroll">
+      <p class="modal-num" id="modalNum">01</p>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <p class="modal-category" id="modalCategory"></p>
+
+      <div class="modal-images" id="modalImages"></div>
+
+      <div class="modal-body">
+        <div class="modal-tools">
+          <span class="mt-label">Tools</span>
+          <p id="modalTools"></p>
+        </div>
+        <div class="modal-text">
+          <p id="modalDescription"></p>
+          <h5>What I learned</h5>
+          <p id="modalLearned"></p>
+          <h5>Why it matters to my development</h5>
+          <p id="modalWhy"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
