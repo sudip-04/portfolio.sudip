@@ -17,7 +17,7 @@
       categoryLabel: 'Physical Design & Fabrication',
       tags: ['physical'],
       tools: 'Timber Craft / Ergonomic Design / Joinery',
-      images: ['assets/hero.JPG'],
+      images: ['assets/study-table.jpg'],
       description: 'Designed and constructed a customized personal study table in 9th grade, focusing on structural stability, joinery, and functional spatial layout.',
       learned: 'Gained early practical understanding of structural ergonomics, load support, and turning raw ideas into tangible, functional furniture.',
       why: 'Marked my initial realization that design is an intentional process connecting human scale, utility, and structural assembly.'
