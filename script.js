@@ -53,7 +53,7 @@
       categoryLabel: 'Built Environment Case Study',
       tags: ['analysis'],
       tools: 'Structural Mapping / Site Analysis / Diagrammatic Modeling',
-      images: ['assets/qantas.jpg', 'assets/westfield.jpg'],
+      images: ['assets/qantas.png', 'assets/westfield.jpg'],
       description: 'Detailed structural analysis examining load paths and framing systems of the Westfield Belconnen carpark and the Qantas Maintenance Hangar at Canberra Airport.',
       learned: 'Analyzed how long-span steel trusses and concrete parking frames handle dynamic loads, environmental stress, and open spatial planning.',
       why: 'Anchored theoretical structural knowledge in real-world commercial and aviation infrastructure.'
