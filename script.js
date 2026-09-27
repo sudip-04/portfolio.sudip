@@ -29,7 +29,7 @@
       categoryLabel: 'Physical Model Craft',
       tags: ['physical'],
       tools: 'Hand Craft / Scale Modeling / Aerodynamic Geometry',
-      images: ['assets/hero.jpg'],
+      images: ['assets/plane.JPG'],
       description: 'Crafted a detailed physical scale replica of a local Buddha Air aircraft from Nepal, exploring structural balance and fine model craft.',
       learned: 'Developed strong spatial awareness, attention to detailed geometry, and patience in precision component assembly.',
       why: 'Fostered a deep appreciation for precise physical representation and precision modeling.'
