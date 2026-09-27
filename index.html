@@ -86,8 +86,12 @@
       <div class="hero-orbit-wrap">
         <div class="orbit" id="orbit">
 
-         
-<img id="heroImage" src="assets/hero.JPG" alt="Featured work" loading="lazy">
+         <svg class="orbit-rings" viewBox="0 0 600 600" aria-hidden="true">
+  <circle cx="300" cy="300" r="299" class="ring ring-outer"></circle>
+  <circle cx="300" cy="300" r="220" class="ring ring-inner" stroke-dasharray="2 8"></circle>
+  <line x1="300" y1="1" x2="300" y2="599" class="ring ring-axis"></line>
+  <line x1="1" y1="300" x2="599" y2="300" class="ring ring-axis"></line>
+</svg>
           <div class="orbit-center">
             <img id="heroImage" src="assets/hero.JPG" alt="Featured work" loading="lazy">
             <div class="orbit-center-caption">
