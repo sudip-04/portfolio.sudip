@@ -77,7 +77,7 @@
       categoryLabel: 'Revit 3D Building Information Modeling',
       tags: ['revit'],
       tools: 'Revit / BIM / Parametric Modeling',
-      images: ['assets/revit.jpg'],
+      images: ['assets/revit.png'],
       description: 'Currently modeling a high-rise 3D skyscraper, exploring parametric components, vertical core organization, and curtain wall facade systems.',
       learned: 'Developing capabilities in 3D Building Information Modeling (BIM), multi-story level coordination, and parametric modeling workflows.',
       why: 'Represents my current growth phase toward modern digital building modeling and smart construction practices.'
