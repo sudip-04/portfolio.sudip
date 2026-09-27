@@ -41,7 +41,7 @@
       categoryLabel: 'Structural Engineering Model',
       tags: ['physical', 'analysis'],
       tools: 'Physical Prototyping / Structural Load Mechanics',
-      images: ['assets/hero.jpg'],
+      images: ['assets/truss.jpeg'],
       description: 'Engineered a physical model bridge inspired by the architectural walking bridge in Belconnen, testing structural load transfer and member efficiency.',
       learned: 'Understood the fundamental principles of truss distribution, member tension/compression, and structural efficiency.',
       why: 'Connected local architectural observation in Canberra with physical structural engineering principles.'
