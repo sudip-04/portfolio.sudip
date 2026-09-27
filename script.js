@@ -65,7 +65,7 @@
       categoryLabel: 'AutoCAD Technical Drafting',
       tags: ['autocad'],
       tools: 'AutoCAD / Technical Documentation / Architectural Floor Plans',
-      images: ['assets/canberra-houses.jpg'],
+      images: ['assets/autoCAD.jpg'],
       description: 'Drafted complete architectural drawings, floor plans, sections, and structural elevations based on Canberra 400 series residential architecture.',
       learned: 'Mastered precise CAD drafting standards, architectural linework hierarchy, dimensioning, and spatial coordination.',
       why: 'Established a professional technical drafting foundation essential for construction documentation.'
